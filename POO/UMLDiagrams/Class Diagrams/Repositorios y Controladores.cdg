@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-package class diagram">
+  <ClassDiagramComponents>
+    <Class name="Conector" package="Modelo.Repositorio" visibility="public" xPosition="1751.0" yPosition="1375.0">
+      <Fields>
+        <Field name="conection" type="Connection" visibility="private" isStatic="true"/>
+        <Field name="stmt" type="Statement" visibility="public" isStatic="true"/>
+        <Field name="pStmt" type="PreparedStatement" visibility="public" isStatic="true"/>
+        <Field name="resSet" type="ResultSet" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getConnection" returnType="Connection" visibility="public" isStatic="true"/>
+        <Method name="login" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="usr"/>
+          <Argument type="String" name="pwd"/>
+        </Method>
+        <Method name="getUsr" returnType="String" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="RepositorioSignatarios" package="Modelo.Repositorio" visibility="public" xPosition="1455.0" yPosition="335.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Signatario" visibility="protected"/>
+        <Method name="addAI" returnType="void" visibility="protected">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="protected">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="crearUsuario" returnType="void" visibility="public">
+          <Argument type="Signatario" name="s"/>
+          <Argument type="String" name="pwd"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="getAllSignatarios" returnType="List&lt;Signatario&gt;" visibility="public"/>
+        <Method name="searchBy" returnType="Signatario" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+        </Method>
+        <Method name="searchBy" returnType="Signatario" visibility="public">
+          <Argument type="String" name="usr"/>
+        </Method>
+        <Method name="usuarioEnUso" returnType="boolean" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="getSiglas" returnType="String" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="searchByFullName" returnType="List&lt;Signatario&gt;" visibility="public">
+          <Argument type="String" name="fullName"/>
+        </Method>
+        <Method name="topSignatarionResultados" returnType="Map&lt;String, Long&gt;" visibility="public">
+          <Argument type="long" name="top"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RepositorioNorma" package="Modelo.Repositorio" visibility="public" xPosition="1877.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Norma" visibility="protected"/>
+        <Method name="getAllNormas" returnType="List&lt;Norma&gt;" visibility="public"/>
+        <Method name="getNormaById" returnType="Norma" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="getNormaByPrueba" returnType="List&lt;Norma&gt;" visibility="public">
+          <Argument type="long" name="idPrueba"/>
+        </Method>
+        <Method name="getNormaByNombre" returnType="Norma" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="searchNormaByNombre" returnType="List&lt;Norma&gt;" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="normasMasPruebas" returnType="Map&lt;String, Long&gt;" visibility="public">
+          <Argument type="long" name="top"/>
+        </Method>
+        <Method name="addAI" returnType="void" visibility="protected">
+          <Argument type="Norma" name="n"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="protected">
+          <Argument type="Norma" name="n"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Norma" name="n"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="protected">
+          <Argument type="Norma" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RepositorioMuestra" package="Modelo.Repositorio" visibility="public" xPosition="1952.0" yPosition="1626.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Muestra" visibility="protected"/>
+        <Method name="searchByNumControl" returnType="Muestra" visibility="public">
+          <Argument type="String" name="numControl"/>
+        </Method>
+        <Method name="getAllMuestras" returnType="List&lt;Muestra&gt;" visibility="public"/>
+        <Method name="searchBy" returnType="List&lt;Muestra&gt;" visibility="public">
+          <Argument type="String" name="numC"/>
+          <Argument type="String" name="proj"/>
+          <Argument type="LocalDate" name="fM"/>
+          <Argument type="LocalTime" name="hM"/>
+          <Argument type="LocalDate" name="fR"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="protected">
+          <Argument type="Muestra" name="m"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="protected">
+          <Argument type="Muestra" name="m"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="Muestra" name="m"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RepositorioBitacora" package="Modelo.Repositorio" visibility="public" xPosition="2326.0" yPosition="1375.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getBitacora" returnType="List&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RepositorioResultado" package="Modelo.Repositorio" visibility="public" xPosition="1645.0" yPosition="1664.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Resultado" visibility="public"/>
+        <Method name="listFromResSet" returnType="List&lt;Resultado&gt;" visibility="public"/>
+        <Method name="addAI" returnType="void" visibility="public">
+          <Argument type="Resultado" name="r"/>
+        </Method>
+        <Method name="getResSit" returnType="List&lt;Resultado&gt;" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="Resultado" name="r"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RepositorioParametro" package="Modelo.Repositorio" visibility="public" xPosition="1330.0" yPosition="1375.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Parametro" visibility="protected"/>
+        <Method name="getAllParams" returnType="List&lt;Parametro&gt;" visibility="public"/>
+        <Method name="searchParametroBySignatario" returnType="List&lt;Parametro&gt;" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+        </Method>
+        <Method name="getById" returnType="Parametro" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="getByName" returnType="Parametro" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="searchByName" returnType="List&lt;Parametro&gt;" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="addAI" returnType="void" visibility="protected">
+          <Argument type="Parametro" name="p"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="protected">
+          <Argument type="Parametro" name="p"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Parametro" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RepositorioPrueba" package="Modelo.Repositorio" visibility="public" xPosition="1027.0" yPosition="314.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Prueba" visibility="protected"/>
+        <Method name="getAllPrueba" returnType="List&lt;Prueba&gt;" visibility="public"/>
+        <Method name="searchByName" returnType="List&lt;Prueba&gt;" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="searchBy" returnType="List&lt;Prueba&gt;" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+          <Argument type="long" name="idParametro"/>
+        </Method>
+        <Method name="getByNombre" returnType="Prueba" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getById" returnType="Prueba" visibility="public">
+          <Argument type="long" name="idPrueba"/>
+        </Method>
+        <Method name="searchBy" returnType="List&lt;Prueba&gt;" visibility="public">
+          <Argument type="long" name="idParametro"/>
+        </Method>
+        <Method name="searchDetalleBy" returnType="List&lt;DetalleSignatario&gt;" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+        </Method>
+        <Method name="signatarioContienePrueba" returnType="boolean" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+          <Argument type="long" name="idPrueba"/>
+        </Method>
+        <Method name="pruebasRealizadasPorAnio" returnType="Map&lt;String, Long&gt;" visibility="public">
+          <Argument type="long" name="anio"/>
+          <Argument type="long" name="top"/>
+        </Method>
+        <Method name="agregarPruebaASignatario" returnType="void" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+          <Argument type="long" name="idPrueba"/>
+        </Method>
+        <Method name="quitarPruebaASignatario" returnType="void" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+          <Argument type="long" name="idPrueba"/>
+        </Method>
+        <Method name="updatePruebasModify" returnType="void" visibility="public">
+          <Argument type="long" name="idDetalle"/>
+          <Argument type="long" name="idSignatario"/>
+        </Method>
+        <Method name="addAI" returnType="void" visibility="public">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="protected">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="protected">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RepositorioSitio" package="Modelo.Repositorio" visibility="public" xPosition="667.0" yPosition="10.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Sitio" visibility="protected"/>
+        <Method name="getAllSitios" returnType="List&lt;Sitio&gt;" visibility="public"/>
+        <Method name="getById" returnType="Sitio" visibility="public">
+          <Argument type="long" name="idSitio"/>
+        </Method>
+        <Method name="search" returnType="List&lt;Sitio&gt;" visibility="public">
+          <Argument type="String" name="clave"/>
+          <Argument type="String" name="latitud"/>
+          <Argument type="String" name="longitud"/>
+          <Argument type="String" name="municipio"/>
+          <Argument type="String" name="estado"/>
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="searchByClave" returnType="List&lt;Sitio&gt;" visibility="public">
+          <Argument type="String" name="clave"/>
+        </Method>
+        <Method name="searhByCliente" returnType="List&lt;Sitio&gt;" visibility="public">
+          <Argument type="long" name="idCliente"/>
+        </Method>
+        <Method name="addAI" returnType="void" visibility="protected">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="protected">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+        <Method name="sitiosConMasResultados" returnType="Map&lt;String, Long&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RepositorioCliente" package="Modelo.Repositorio" visibility="public" xPosition="1816.0" yPosition="529.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Cliente" visibility="protected"/>
+        <Method name="getAllClientes" returnType="List&lt;Cliente&gt;" visibility="public"/>
+        <Method name="searchByName" returnType="List&lt;Cliente&gt;" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getById" returnType="Cliente" visibility="public">
+          <Argument type="long" name="idCliente"/>
+        </Method>
+        <Method name="getByName" returnType="Cliente" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="addAI" returnType="void" visibility="protected">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="clientesFrecuentes" returnType="Map&lt;String, Long&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ControladorPruebas" package="Controlador" visibility="public" xPosition="1153.0" yPosition="749.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="public">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorParametros" package="Controlador" visibility="public" xPosition="1440.0" yPosition="1683.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="public">
+          <Argument type="Parametro" name="p"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Parametro" name="p"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Parametro" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EventManager" package="Controlador" visibility="public" xPosition="1052.0" yPosition="1673.0">
+      <Fields>
+        <Field name="listeners" type="Map&lt;String, List&lt;EventListener&gt;&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="operations"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="subscribe" returnType="void" visibility="public">
+          <Argument type="String" name="eventType"/>
+          <Argument type="EventListener" name="listener"/>
+        </Method>
+        <Method name="unsubscribe" returnType="void" visibility="public">
+          <Argument type="String" name="eventType"/>
+          <Argument type="EventListener" name="listener"/>
+        </Method>
+        <Method name="notify" returnType="void" visibility="public">
+          <Argument type="String" name="eventType"/>
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorClientes" package="Controlador" visibility="public" xPosition="1871.0" yPosition="826.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="private">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorSignatarios" package="Controlador" visibility="public" xPosition="1504.0" yPosition="730.0">
+      <Fields>
+        <Field name="repoPrueb" type="RepositorioPrueba" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorSitios" package="Controlador" visibility="public" xPosition="849.0" yPosition="335.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="public">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorMuestra" package="Controlador" visibility="public" xPosition="2144.0" yPosition="1375.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="public">
+          <Argument type="Muestra" name="m"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Muestra" name="m"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Muestra" name="m"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorNormas" package="Controlador" visibility="public" xPosition="1965.0" yPosition="348.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="public">
+          <Argument type="Norma" name="n"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Norma" name="n"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Norma" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorGraficos" package="Controlador" visibility="public" xPosition="1360.0" yPosition="20.0">
+      <Fields>
+        <Field name="repoPrueba" type="RepositorioPrueba" visibility="package"/>
+        <Field name="repoSig" type="RepositorioSignatarios" visibility="package"/>
+        <Field name="repoNorm" type="RepositorioNorma" visibility="package"/>
+        <Field name="repoSit" type="RepositorioSitio" visibility="package"/>
+        <Field name="repoCli" type="RepositorioCliente" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="dataSetFromMap" returnType="DefaultCategoryDataset" visibility="private">
+          <Argument type="Map&lt;String, Long&gt;" name="map"/>
+          <Argument type="String" name="group"/>
+        </Method>
+        <Method name="chartDataSet" returnType="DefaultCategoryDataset" visibility="public">
+          <Argument type="int" name="chartNum"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="EventListener" package="Controlador" visibility="public" xPosition="1052.0" yPosition="1501.0">
+      <Methods>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="String" name="eventType"/>
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="listeners" source="Controlador.EventManager" target="Controlador.EventListener" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Map&lt;String, List&lt;EventListener&gt;&gt;"/>
+    <HasRelation name="repoCli" source="Controlador.ControladorGraficos" target="Modelo.Repositorio.RepositorioCliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoSit" source="Controlador.ControladorGraficos" target="Modelo.Repositorio.RepositorioSitio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoNorm" source="Controlador.ControladorGraficos" target="Modelo.Repositorio.RepositorioNorma" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Controlador.ControladorNormas" target="Modelo.Repositorio.RepositorioNorma"/>
+    <IsRelation name="is" source="Controlador.ControladorClientes" target="Modelo.Repositorio.RepositorioCliente"/>
+    <IsRelation name="is" source="Controlador.ControladorSignatarios" target="Modelo.Repositorio.RepositorioSignatarios"/>
+    <IsRelation name="is" source="Controlador.ControladorSitios" target="Modelo.Repositorio.RepositorioSitio"/>
+    <IsRelation name="is" source="Controlador.ControladorPruebas" target="Modelo.Repositorio.RepositorioPrueba"/>
+    <IsRelation name="is" source="Controlador.ControladorParametros" target="Modelo.Repositorio.RepositorioParametro"/>
+    <HasRelation name="repoPrueb" source="Controlador.ControladorSignatarios" target="Modelo.Repositorio.RepositorioPrueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Controlador.ControladorMuestra" target="Modelo.Repositorio.RepositorioMuestra"/>
+    <HasRelation name="repoPrueba" source="Controlador.ControladorGraficos" target="Modelo.Repositorio.RepositorioPrueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoSig" source="Controlador.ControladorGraficos" target="Modelo.Repositorio.RepositorioSignatarios" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

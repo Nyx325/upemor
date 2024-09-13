@@ -1,0 +1,1843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="EI-POO">
+  <ClassDiagramComponents>
+    <Class name="Resultado" package="Modelo.Entidad" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="folio" type="long" visibility="public"/>
+        <Field name="resultado" type="String" visibility="public"/>
+        <Field name="fAnalisis" type="LocalDate" visibility="public"/>
+        <Field name="idSignatario" type="long" visibility="public"/>
+        <Field name="idPrueba" type="long" visibility="public"/>
+        <Field name="idNorma" type="long" visibility="public"/>
+        <Field name="numControl" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="folio"/>
+          <Argument type="String" name="resultado"/>
+          <Argument type="LocalDate" name="fAnalisis"/>
+          <Argument type="long" name="idSignatario"/>
+          <Argument type="long" name="idPrueba"/>
+          <Argument type="long" name="idNorma"/>
+          <Argument type="String" name="numControl"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Prueba" package="Modelo.Entidad" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="idPrueba" type="long" visibility="public"/>
+        <Field name="nombre" type="String" visibility="public"/>
+        <Field name="idParametro" type="long" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="idPrueba"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="long" name="idParametro"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Parametro" package="Modelo.Entidad" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="idParametro" type="long" visibility="public"/>
+        <Field name="nombre" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="idParametro"/>
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Norma" package="Modelo.Entidad" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="idNorma" type="long" visibility="public"/>
+        <Field name="norma" type="String" visibility="public"/>
+        <Field name="unidades" type="String" visibility="public"/>
+        <Field name="tipoVentana" type="long" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="idNorma"/>
+          <Argument type="String" name="norma"/>
+          <Argument type="String" name="unidades"/>
+          <Argument type="long" name="tipoVentana"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Norma" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DetalleSignatario" package="Modelo.Entidad" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="idDetalle" type="long" visibility="public"/>
+        <Field name="idSignatario" type="long" visibility="public"/>
+        <Field name="idPrueba" type="long" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="idDetalle"/>
+          <Argument type="long" name="idSignatario"/>
+          <Argument type="long" name="idPrueba"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Sitio" package="Modelo.Entidad" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="idLugar" type="long" visibility="public"/>
+        <Field name="clave" type="String" visibility="public"/>
+        <Field name="nombre" type="String" visibility="public"/>
+        <Field name="cuenca" type="String" visibility="public"/>
+        <Field name="cAcuifero" type="String" visibility="public"/>
+        <Field name="acuifero" type="String" visibility="public"/>
+        <Field name="organismo" type="String" visibility="public"/>
+        <Field name="dirLocal" type="String" visibility="public"/>
+        <Field name="edo" type="String" visibility="public"/>
+        <Field name="municipio" type="String" visibility="public"/>
+        <Field name="cAgua" type="String" visibility="public"/>
+        <Field name="tipoC" type="String" visibility="public"/>
+        <Field name="subtipoC" type="String" visibility="public"/>
+        <Field name="latitud" type="String" visibility="public"/>
+        <Field name="longitud" type="String" visibility="public"/>
+        <Field name="uso" type="String" visibility="public"/>
+        <Field name="lugarT" type="String" visibility="public"/>
+        <Field name="idCliente" type="long" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="idLugar"/>
+          <Argument type="String" name="clave"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="cuenca"/>
+          <Argument type="String" name="cAcuifero"/>
+          <Argument type="String" name="acuifero"/>
+          <Argument type="String" name="organismo"/>
+          <Argument type="String" name="dirLocal"/>
+          <Argument type="String" name="edo"/>
+          <Argument type="String" name="municipio"/>
+          <Argument type="String" name="cAgua"/>
+          <Argument type="String" name="tipoC"/>
+          <Argument type="String" name="subtipoC"/>
+          <Argument type="String" name="latitud"/>
+          <Argument type="String" name="longitud"/>
+          <Argument type="String" name="uso"/>
+          <Argument type="String" name="lugarT"/>
+          <Argument type="long" name="idCliente"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Signatario" package="Modelo.Entidad" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="idSignatario" type="long" visibility="public"/>
+        <Field name="primNombre" type="String" visibility="public"/>
+        <Field name="segNombre" type="String" visibility="public"/>
+        <Field name="apellidoP" type="String" visibility="public"/>
+        <Field name="apellidoM" type="String" visibility="public"/>
+        <Field name="sueldo" type="float" visibility="public"/>
+        <Field name="bono" type="float" visibility="public"/>
+        <Field name="fIngreso" type="LocalDate" visibility="public"/>
+        <Field name="fNacimiento" type="LocalDate" visibility="public"/>
+        <Field name="posicion" type="String" visibility="public"/>
+        <Field name="usuario" type="String" visibility="public"/>
+        <Field name="siglas" type="String" visibility="public"/>
+        <Field name="POSICION_DIRECCION" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="POSICION_MUESTREO" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="POSICION_PRUEBAS" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="POSICION_SINDICALIZADO" type="String" visibility="public" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="idSignatario"/>
+          <Argument type="String" name="primNombre"/>
+          <Argument type="String" name="segNombre"/>
+          <Argument type="String" name="apellidoP"/>
+          <Argument type="String" name="apellidoM"/>
+          <Argument type="float" name="sueldo"/>
+          <Argument type="float" name="bono"/>
+          <Argument type="LocalDate" name="fIngreso"/>
+          <Argument type="LocalDate" name="fNacimiento"/>
+          <Argument type="String" name="posicion"/>
+          <Argument type="String" name="usuario"/>
+          <Argument type="String" name="siglas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="equalsExceptId" returnType="boolean" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getNombreCompleto" returnType="String" visibility="public"/>
+        <Method name="printData" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Muestra" package="Modelo.Entidad" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="numControl" type="String" visibility="public"/>
+        <Field name="proyecto" type="String" visibility="public"/>
+        <Field name="fMuestreo" type="LocalDate" visibility="public"/>
+        <Field name="hMuestreo" type="LocalTime" visibility="public"/>
+        <Field name="fRecepcion" type="LocalDate" visibility="public"/>
+        <Field name="muestreador" type="Long" visibility="public"/>
+        <Field name="idSitio" type="Long" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="numControl"/>
+          <Argument type="String" name="proyecto"/>
+          <Argument type="LocalDate" name="fMuestreo"/>
+          <Argument type="LocalTime" name="hMuestreo"/>
+          <Argument type="LocalDate" name="fRecepcion"/>
+          <Argument type="long" name="muestreador"/>
+          <Argument type="long" name="idSitio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="Modelo.Entidad" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="idCliente" type="long" visibility="public"/>
+        <Field name="nombre" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="idCliente"/>
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Conector" package="Modelo.Repositorio" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="conection" type="Connection" visibility="private" isStatic="true"/>
+        <Field name="stmt" type="Statement" visibility="public" isStatic="true"/>
+        <Field name="pStmt" type="PreparedStatement" visibility="public" isStatic="true"/>
+        <Field name="resSet" type="ResultSet" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getConnection" returnType="Connection" visibility="public" isStatic="true"/>
+        <Method name="login" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="usr"/>
+          <Argument type="String" name="pwd"/>
+        </Method>
+        <Method name="getUsr" returnType="String" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="RepositorioSignatarios" package="Modelo.Repositorio" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Signatario" visibility="protected"/>
+        <Method name="addAI" returnType="void" visibility="protected">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="protected">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="crearUsuario" returnType="void" visibility="public">
+          <Argument type="Signatario" name="s"/>
+          <Argument type="String" name="pwd"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="getAllSignatarios" returnType="List&lt;Signatario&gt;" visibility="public"/>
+        <Method name="searchBy" returnType="Signatario" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+        </Method>
+        <Method name="searchBy" returnType="Signatario" visibility="public">
+          <Argument type="String" name="usr"/>
+        </Method>
+        <Method name="usuarioEnUso" returnType="boolean" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="getSiglas" returnType="String" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="searchByFullName" returnType="List&lt;Signatario&gt;" visibility="public">
+          <Argument type="String" name="fullName"/>
+        </Method>
+        <Method name="topSignatarionResultados" returnType="Map&lt;String, Long&gt;" visibility="public">
+          <Argument type="long" name="top"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RepositorioNorma" package="Modelo.Repositorio" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Norma" visibility="protected"/>
+        <Method name="getAllNormas" returnType="List&lt;Norma&gt;" visibility="public"/>
+        <Method name="getNormaById" returnType="Norma" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="getNormaByPrueba" returnType="List&lt;Norma&gt;" visibility="public">
+          <Argument type="long" name="idPrueba"/>
+        </Method>
+        <Method name="getNormaByNombre" returnType="Norma" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="searchNormaByNombre" returnType="List&lt;Norma&gt;" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="normasMasPruebas" returnType="Map&lt;String, Long&gt;" visibility="public">
+          <Argument type="long" name="top"/>
+        </Method>
+        <Method name="addAI" returnType="void" visibility="protected">
+          <Argument type="Norma" name="n"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="protected">
+          <Argument type="Norma" name="n"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Norma" name="n"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="protected">
+          <Argument type="Norma" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RepositorioMuestra" package="Modelo.Repositorio" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Muestra" visibility="protected"/>
+        <Method name="searchByNumControl" returnType="Muestra" visibility="public">
+          <Argument type="String" name="numControl"/>
+        </Method>
+        <Method name="getAllMuestras" returnType="List&lt;Muestra&gt;" visibility="public"/>
+        <Method name="searchBy" returnType="List&lt;Muestra&gt;" visibility="public">
+          <Argument type="String" name="numC"/>
+          <Argument type="String" name="proj"/>
+          <Argument type="LocalDate" name="fM"/>
+          <Argument type="LocalTime" name="hM"/>
+          <Argument type="LocalDate" name="fR"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="protected">
+          <Argument type="Muestra" name="m"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="protected">
+          <Argument type="Muestra" name="m"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="Muestra" name="m"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RepositorioBitacora" package="Modelo.Repositorio" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getBitacora" returnType="List&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RepositorioResultado" package="Modelo.Repositorio" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Resultado" visibility="public"/>
+        <Method name="listFromResSet" returnType="List&lt;Resultado&gt;" visibility="public"/>
+        <Method name="addAI" returnType="void" visibility="public">
+          <Argument type="Resultado" name="r"/>
+        </Method>
+        <Method name="getResSit" returnType="List&lt;Resultado&gt;" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="Resultado" name="r"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RepositorioParametro" package="Modelo.Repositorio" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Parametro" visibility="protected"/>
+        <Method name="getAllParams" returnType="List&lt;Parametro&gt;" visibility="public"/>
+        <Method name="searchParametroBySignatario" returnType="List&lt;Parametro&gt;" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+        </Method>
+        <Method name="getById" returnType="Parametro" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="getByName" returnType="Parametro" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="searchByName" returnType="List&lt;Parametro&gt;" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="addAI" returnType="void" visibility="protected">
+          <Argument type="Parametro" name="p"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="protected">
+          <Argument type="Parametro" name="p"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Parametro" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RepositorioPrueba" package="Modelo.Repositorio" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Prueba" visibility="protected"/>
+        <Method name="getAllPrueba" returnType="List&lt;Prueba&gt;" visibility="public"/>
+        <Method name="searchByName" returnType="List&lt;Prueba&gt;" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="searchBy" returnType="List&lt;Prueba&gt;" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+          <Argument type="long" name="idParametro"/>
+        </Method>
+        <Method name="getByNombre" returnType="Prueba" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getById" returnType="Prueba" visibility="public">
+          <Argument type="long" name="idPrueba"/>
+        </Method>
+        <Method name="searchBy" returnType="List&lt;Prueba&gt;" visibility="public">
+          <Argument type="long" name="idParametro"/>
+        </Method>
+        <Method name="searchDetalleBy" returnType="List&lt;DetalleSignatario&gt;" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+        </Method>
+        <Method name="signatarioContienePrueba" returnType="boolean" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+          <Argument type="long" name="idPrueba"/>
+        </Method>
+        <Method name="pruebasRealizadasPorAnio" returnType="Map&lt;String, Long&gt;" visibility="public">
+          <Argument type="long" name="anio"/>
+          <Argument type="long" name="top"/>
+        </Method>
+        <Method name="agregarPruebaASignatario" returnType="void" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+          <Argument type="long" name="idPrueba"/>
+        </Method>
+        <Method name="quitarPruebaASignatario" returnType="void" visibility="public">
+          <Argument type="long" name="idSignatario"/>
+          <Argument type="long" name="idPrueba"/>
+        </Method>
+        <Method name="updatePruebasModify" returnType="void" visibility="public">
+          <Argument type="long" name="idDetalle"/>
+          <Argument type="long" name="idSignatario"/>
+        </Method>
+        <Method name="addAI" returnType="void" visibility="public">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="protected">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="protected">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RepositorioSitio" package="Modelo.Repositorio" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Sitio" visibility="protected"/>
+        <Method name="getAllSitios" returnType="List&lt;Sitio&gt;" visibility="public"/>
+        <Method name="getById" returnType="Sitio" visibility="public">
+          <Argument type="long" name="idSitio"/>
+        </Method>
+        <Method name="search" returnType="List&lt;Sitio&gt;" visibility="public">
+          <Argument type="String" name="clave"/>
+          <Argument type="String" name="latitud"/>
+          <Argument type="String" name="longitud"/>
+          <Argument type="String" name="municipio"/>
+          <Argument type="String" name="estado"/>
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="searchByClave" returnType="List&lt;Sitio&gt;" visibility="public">
+          <Argument type="String" name="clave"/>
+        </Method>
+        <Method name="searhByCliente" returnType="List&lt;Sitio&gt;" visibility="public">
+          <Argument type="long" name="idCliente"/>
+        </Method>
+        <Method name="addAI" returnType="void" visibility="protected">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="protected">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+        <Method name="sitiosConMasResultados" returnType="Map&lt;String, Long&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RepositorioCliente" package="Modelo.Repositorio" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fromResSet" returnType="Cliente" visibility="protected"/>
+        <Method name="getAllClientes" returnType="List&lt;Cliente&gt;" visibility="public"/>
+        <Method name="searchByName" returnType="List&lt;Cliente&gt;" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getById" returnType="Cliente" visibility="public">
+          <Argument type="long" name="idCliente"/>
+        </Method>
+        <Method name="getByName" returnType="Cliente" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="addAI" returnType="void" visibility="protected">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="clientesFrecuentes" returnType="Map&lt;String, Long&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PruebasVista" package="Vista.Forms" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Fields>
+        <Field name="prueba" type="Prueba" visibility="private"/>
+        <Field name="idParametro" type="long" visibility="private"/>
+        <Field name="agregando" type="boolean" visibility="private"/>
+        <Field name="pruebas" type="List&lt;Prueba&gt;" visibility="private"/>
+        <Field name="utils" type="VentanaUtils" visibility="package"/>
+        <Field name="pruebasCtl" type="ControladorPruebas" visibility="private"/>
+        <Field name="repoParam" type="RepositorioParametro" visibility="private"/>
+        <Field name="aceptarBtn" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="buscarBtn" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="busquedaTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="eliminarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="nombreTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="nuevoBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="parametroLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pruebasScrollList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="String" name="eventType"/>
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="loadPruebas" returnType="void" visibility="private"/>
+        <Method name="preparar" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="busquedaTFKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="pruebasScrollListMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="aceptarBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="buscarBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="nuevoBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClientesVista" package="Vista.Forms" visibility="public" xPosition="1220.0" yPosition="820.0">
+      <Fields>
+        <Field name="utils" type="VentanaUtils" visibility="private"/>
+        <Field name="clientesCtl" type="ControladorClientes" visibility="private"/>
+        <Field name="sitioRepo" type="RepositorioSitio" visibility="private"/>
+        <Field name="clientes" type="List&lt;Cliente&gt;" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="aceptarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="agregarSBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buscadorPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="buscadorTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="clientesScrollList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="clientesScrollPane" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="eliminarCBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="eliminarSBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="gestionCPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="mainPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="mainScrollPane" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="nombreTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="nuevoCBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="sitiosScrollList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="sitiosScrollPane" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="loadClientes" returnType="void" visibility="public"/>
+        <Method name="loadSitios" returnType="void" visibility="public">
+          <Argument type="List&lt;Sitio&gt;" name="list"/>
+        </Method>
+        <Method name="clientesScrollListMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarCBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="buscadorTFKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="preparar" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="nuevoCBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="aceptarBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MenuPrincipal" package="Vista.Forms" visibility="public" xPosition="1520.0" yPosition="820.0">
+      <Fields>
+        <Field name="sesion" type="Signatario" visibility="public"/>
+        <Field name="instancia" type="MenuPrincipal" visibility="private" isStatic="true"/>
+        <Field name="utils" type="VentanaUtils" visibility="public"/>
+        <Field name="MainPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="adminPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="chartMenu" type="javax.swing.JPopupMenu" visibility="private"/>
+        <Field name="gSitiosBtn" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jEditorPane1" type="javax.swing.JEditorPane" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel10" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel11" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel6" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel8" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel9" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="muestreoPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="otrosPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pruebasPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="signatariosBtn" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstancia" returnType="MenuPrincipal" visibility="public" isStatic="true"/>
+        <Method name="preparar" returnType="void" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="signatariosBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel10MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel8MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel2MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel3MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel5MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel4MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel7MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel11MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="gSitiosBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel6MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel9MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ventana2" package="Vista.Forms.VentanasCaptura" visibility="public" xPosition="1820.0" yPosition="820.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Ventana1" package="Vista.Forms.VentanasCaptura" visibility="public" xPosition="2120.0" yPosition="820.0">
+      <Fields>
+        <Field name="prueba" type="Prueba" visibility="public"/>
+        <Field name="norma" type="Norma" visibility="public"/>
+        <Field name="muestra" type="Muestra" visibility="public"/>
+        <Field name="analista" type="Signatario" visibility="public"/>
+        <Field name="utils" type="VentanaUtils" visibility="private"/>
+        <Field name="repoRes" type="RepositorioResultado" visibility="private"/>
+        <Field name="aceptarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="analistaLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="fechaTF" type="Vista.Extras.FechaTF" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="muestraLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="normaLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pruebaLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="resultadoTF" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="preparar" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="aceptarBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ResultadosMenuPrevio" package="Vista.Forms" visibility="public" xPosition="20.0" yPosition="1220.0">
+      <Fields>
+        <Field name="utils" type="VentanaUtils" visibility="private"/>
+        <Field name="ventanaPrincial" type="boolean" visibility="private"/>
+        <Field name="buscandoMuestra" type="boolean" visibility="private"/>
+        <Field name="sesion" type="Signatario" visibility="private"/>
+        <Field name="muestra" type="Muestra" visibility="private"/>
+        <Field name="prueba" type="Prueba" visibility="private"/>
+        <Field name="norma" type="Norma" visibility="private"/>
+        <Field name="parametros" type="List&lt;Parametro&gt;" visibility="private"/>
+        <Field name="pruebas" type="HashMap&lt;String, List&lt;Prueba&gt;&gt;" visibility="private"/>
+        <Field name="normas" type="List&lt;Norma&gt;" visibility="private"/>
+        <Field name="repoParam" type="RepositorioParametro" visibility="private"/>
+        <Field name="repoPrueba" type="RepositorioPrueba" visibility="private"/>
+        <Field name="repoNorma" type="RepositorioNorma" visibility="private"/>
+        <Field name="instancia" type="ResultadosMenuPrevio" visibility="private" isStatic="true"/>
+        <Field name="buenDiaLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="continuarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="muestraLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="normaCbox" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="parametroCbox" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="pruebasTB" type="javax.swing.JTable" visibility="private"/>
+        <Field name="selMuestraBtn" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="volverBtn1" type="javax.swing.JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstancia" returnType="ResultadosMenuPrevio" visibility="public" isStatic="true"/>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="String" name="eventType"/>
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="volverBtn1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="continuarBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="normaCboxActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="pruebasTBMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="selMuestraBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="parametroCboxActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="loadPruebas" returnType="void" visibility="private">
+          <Argument type="List&lt;Prueba&gt;" name="list"/>
+        </Method>
+        <Method name="loadNormas" returnType="void" visibility="private">
+          <Argument type="List&lt;Norma&gt;" name="list"/>
+        </Method>
+        <Method name="preparar" returnType="void" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="cerrarVentana" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BuscadorSitios" package="Vista.Forms" visibility="public" xPosition="320.0" yPosition="1220.0">
+      <Fields>
+        <Field name="utils" type="VentanaUtils" visibility="private"/>
+        <Field name="sitioCtl" type="ControladorSitios" visibility="private"/>
+        <Field name="ultimaListaUsada" type="List&lt;Sitio&gt;" visibility="private"/>
+        <Field name="instancia" type="BuscadorSitios" visibility="private" isStatic="true"/>
+        <Field name="sitio" type="Sitio" visibility="private"/>
+        <Field name="modo" type="String" visibility="private"/>
+        <Field name="event" type="EventManager" visibility="private"/>
+        <Field name="EVENTO_BUSQUEDA" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="MODO_BUSQUEDA" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="MODO_SELECTOR" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="MODO_GESTION" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="EstadoTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="GestionPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="LatitudTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="LongitudTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="MunicipioTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="VistaPanel" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="aceptarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="aceptarBusquedaBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="acuiferoTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="buscarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cAcuiferoTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="cAguaTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="claveTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="cuencaTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="dirLocalTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="eliminarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="gClaveTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="gEdoTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="gLatitudTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="gLongitudTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="gMunicipioTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="gNombreTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="gestionBotonesPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel19" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel20" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel21" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel22" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel23" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel24" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel25" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel26" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="lugatTTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="nombreTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="nuevoBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="organismoTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="sPaneGestion" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="sitiosTb" type="javax.swing.JTable" visibility="private"/>
+        <Field name="subtipoCTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tipoCTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="usoTF" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstancia" returnType="BuscadorSitios" visibility="public" isStatic="true"/>
+        <Method name="subscribe" returnType="void" visibility="public">
+          <Argument type="EventListener" name="listener"/>
+        </Method>
+        <Method name="unsuscribe" returnType="void" visibility="public">
+          <Argument type="EventListener" name="listener"/>
+        </Method>
+        <Method name="setModo" returnType="void" visibility="public">
+          <Argument type="String" name="modo"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="sitiosTbMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="nuevoBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="aceptarBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="aceptarBusquedaBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="cargarDatos" returnType="void" visibility="private">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+        <Method name="obtenerDeTF" returnType="Sitio" visibility="private"/>
+        <Method name="buscar" returnType="void" visibility="private"/>
+        <Method name="buscarBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="loadSitios" returnType="void" visibility="private">
+          <Argument type="List&lt;Sitio&gt;" name="list"/>
+        </Method>
+        <Method name="preparar" returnType="void" visibility="public">
+          <Argument type="String" name="modo"/>
+        </Method>
+        <Method name="preparar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="GraficosVista" package="Vista.Forms" visibility="public" xPosition="620.0" yPosition="1220.0">
+      <Fields>
+        <Field name="chartCtl" type="ControladorGraficos" visibility="package"/>
+        <Field name="utils" type="VentanaUtils" visibility="package"/>
+        <Field name="chartComboBox" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="chartView" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="chartComboBoxActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="createChart" returnType="void" visibility="public">
+          <Argument type="int" name="opc"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="NormaVista" package="Vista.Forms" visibility="public" xPosition="920.0" yPosition="1220.0">
+      <Fields>
+        <Field name="utils" type="VentanaUtils" visibility="package"/>
+        <Field name="normasCtl" type="ControladorNormas" visibility="private"/>
+        <Field name="normas" type="List&lt;Norma&gt;" visibility="private"/>
+        <Field name="norma" type="Norma" visibility="private"/>
+        <Field name="aceptarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buscarTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="eliminarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="nombreTA" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="normaScrollList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="nuevoBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="tipoVComboBox" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="unidadesTF" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="preparar" returnType="void" visibility="public"/>
+        <Method name="loadNormas" returnType="void" visibility="public">
+          <Argument type="List&lt;Norma&gt;" name="list"/>
+        </Method>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="normaScrollListMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="buscarTFKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="aceptarBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="nuevoBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ParametroVista" package="Vista.Forms" visibility="public" xPosition="1220.0" yPosition="1220.0">
+      <Fields>
+        <Field name="instancia" type="ParametroVista" visibility="private" isStatic="true"/>
+        <Field name="parametrosCtl" type="ControladorParametros" visibility="private"/>
+        <Field name="utils" type="VentanaUtils" visibility="private"/>
+        <Field name="parametros" type="List&lt;Parametro&gt;" visibility="private"/>
+        <Field name="parametro" type="Parametro" visibility="private"/>
+        <Field name="events" type="EventManager" visibility="private"/>
+        <Field name="EVENTO_BUSQUEDA" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="MODO_BUSQUEDA" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="MODO_GESTION" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="aceptarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buscarTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="busquedaAceptarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="eliminarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="nombreLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="nombreTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="nuevoBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="parametrosScrollList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="subscribe" returnType="void" visibility="public">
+          <Argument type="EventListener" name="listener"/>
+        </Method>
+        <Method name="unsuscribe" returnType="void" visibility="public">
+          <Argument type="EventListener" name="listener"/>
+        </Method>
+        <Method name="getInstancia" returnType="ParametroVista" visibility="public" isStatic="true"/>
+        <Method name="preparar" returnType="void" visibility="public">
+          <Argument type="String" name="modo"/>
+        </Method>
+        <Method name="preparar" returnType="void" visibility="public"/>
+        <Method name="loadParametros" returnType="void" visibility="public">
+          <Argument type="List&lt;Parametro&gt;" name="lista"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="parametrosScrollListMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="aceptarBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="nuevoBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="buscarTFKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="busquedaAceptarBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Login" package="Vista.Forms" visibility="public" xPosition="1520.0" yPosition="1220.0">
+      <Fields>
+        <Field name="instancia" type="Login" visibility="public" isStatic="true"/>
+        <Field name="repoSig" type="RepositorioSignatarios" visibility="private"/>
+        <Field name="utils" type="VentanaUtils" visibility="private"/>
+        <Field name="AceptarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pwdTF" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="userTF" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstancia" returnType="Login" visibility="public" isStatic="true"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="AceptarBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BuscadorSignatarios" package="Vista.Forms" visibility="public" xPosition="1820.0" yPosition="1220.0">
+      <Fields>
+        <Field name="signatario" type="Signatario" visibility="private"/>
+        <Field name="signatarios" type="List&lt;Signatario&gt;" visibility="private"/>
+        <Field name="instancia" type="BuscadorSignatarios" visibility="private" isStatic="true"/>
+        <Field name="utils" type="VentanaUtils" visibility="private"/>
+        <Field name="repoSig" type="RepositorioSignatarios" visibility="private"/>
+        <Field name="events" type="EventManager" visibility="private"/>
+        <Field name="EVENTO_BUSQUEDA" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="aceptarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="busquedaTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="signatarioScrollList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstancia" returnType="BuscadorSignatarios" visibility="public" isStatic="true"/>
+        <Method name="subscribe" returnType="void" visibility="public">
+          <Argument type="EventListener" name="listener"/>
+        </Method>
+        <Method name="unsuscribe" returnType="void" visibility="public">
+          <Argument type="EventListener" name="listener"/>
+        </Method>
+        <Method name="buscar" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="busquedaTFKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="aceptarBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="signatarioScrollListMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CheckBoxYPrueba" package="Vista.Forms" visibility="public" xPosition="2120.0" yPosition="1220.0">
+      <Fields>
+        <Field name="cbox" type="JCheckBox" visibility="package"/>
+        <Field name="p" type="Prueba" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JCheckBox" name="cbox"/>
+          <Argument type="Prueba" name="p"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="SignatariosMenu" package="Vista.Forms" visibility="public" xPosition="20.0" yPosition="1620.0">
+      <Fields>
+        <Field name="signatario" type="Signatario" visibility="package"/>
+        <Field name="parametro" type="Parametro" visibility="package"/>
+        <Field name="repoParam" type="RepositorioParametro" visibility="package"/>
+        <Field name="repoPrueb" type="RepositorioPrueba" visibility="package"/>
+        <Field name="sigCtl" type="ControladorSignatarios" visibility="package"/>
+        <Field name="checkboxs" type="Map&lt;String, CheckBoxYPrueba&gt;" visibility="package"/>
+        <Field name="params" type="List&lt;Parametro&gt;" visibility="package"/>
+        <Field name="signatarios" type="List&lt;Signatario&gt;" visibility="package"/>
+        <Field name="utils" type="VentanaUtils" visibility="package"/>
+        <Field name="instancia" type="SignatariosMenu" visibility="private" isStatic="true"/>
+        <Field name="AceptarBtn" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="ParamsScrollList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="ParamsScrollPane" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="PruebasPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="PruebasScrollPane" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="SignatScrollList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="SignatarioSrollPane" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="SignatariosScrollPane" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="apellido1TF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="apellido2TF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="bonoTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="elminarSigBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="fIngresoTF" type="Vista.Extras.FechaTF" visibility="private"/>
+        <Field name="fNacTF" type="Vista.Extras.FechaTF" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="nombre2TF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="nombreTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="nuevoSigBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="posicionComboBox" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="pwd1Lbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pwd2Lbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pwd2TF" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="pwdTF" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="signatPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="sueldoTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="usrLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="usrTF" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstancia" returnType="SignatariosMenu" visibility="public" isStatic="true"/>
+        <Method name="preparar" returnType="void" visibility="public"/>
+        <Method name="crearEventoCbox" returnType="void" visibility="public">
+          <Argument type="JCheckBox" name="cbox"/>
+        </Method>
+        <Method name="loadSignatarios" returnType="void" visibility="public"/>
+        <Method name="loadPruebas" returnType="void" visibility="private">
+          <Argument type="List&lt;Prueba&gt;" name="pruebas"/>
+        </Method>
+        <Method name="pruebasPorSignatario" returnType="void" visibility="private">
+          <Argument type="Parametro" name="param"/>
+        </Method>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="ParamsScrollListMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="SignatScrollListMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="AceptarBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="usrTFActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="nuevoSigBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="elminarSigBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="limpiarInputSignatario" returnType="void" visibility="public"/>
+        <Method name="cerrarVentana" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ResultadosVista" package="Vista.Forms" visibility="public" xPosition="320.0" yPosition="1620.0">
+      <Fields>
+        <Field name="idSignatario" type="long" visibility="package"/>
+        <Field name="resultado" type="Resultado" visibility="package"/>
+        <Field name="resultados" type="List&lt;Resultado&gt;" visibility="package"/>
+        <Field name="repoRes" type="RepositorioResultado" visibility="package"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jToggleButton1" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="resultadosTB" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="resultadosTBMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jToggleButton1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="cargarLista" returnType="void" visibility="public"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BuscadorMuestras" package="Vista.Forms" visibility="public" xPosition="620.0" yPosition="1620.0">
+      <Fields>
+        <Field name="instancia" type="BuscadorMuestras" visibility="private" isStatic="true"/>
+        <Field name="utils" type="VentanaUtils" visibility="private"/>
+        <Field name="MODO_VISTA" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="MODO_BUSQUEDA" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="MODO_GESTION" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="EVENTO_BUSQUEDA" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="muestreadorCambio" type="Long" visibility="package"/>
+        <Field name="sitioCambio" type="Long" visibility="package"/>
+        <Field name="ultimaLista" type="List&lt;Muestra&gt;" visibility="package"/>
+        <Field name="listaEmpty" type="List&lt;Muestra&gt;" visibility="package"/>
+        <Field name="muestraCtl" type="ControladorMuestra" visibility="package"/>
+        <Field name="repoSig" type="RepositorioSignatarios" visibility="package"/>
+        <Field name="repoSit" type="RepositorioSitio" visibility="package"/>
+        <Field name="eventos" type="EventManager" visibility="package"/>
+        <Field name="muestra" type="Muestra" visibility="private"/>
+        <Field name="agregando" type="boolean" visibility="private"/>
+        <Field name="aceptarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buscarBtn3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buscarMuestreadorBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buscarSitioBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="eliminarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="fmTF" type="FechaTF" visibility="private"/>
+        <Field name="frTF" type="FechaTF" visibility="private"/>
+        <Field name="gAceptarBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="gFMuestreoLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="gFMuestreoTF" type="Vista.Extras.FechaTF" visibility="private"/>
+        <Field name="gFRecepcionLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="gFRecepcionTF" type="Vista.Extras.FechaTF" visibility="private"/>
+        <Field name="gHMuestreoLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="gHoraTF" type="Vista.Extras.HoraTF" visibility="private"/>
+        <Field name="gMuestreadorLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="gNumCLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="gNumCTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="gProyTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="gProyectoLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="gSitioLbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="hmTF" type="HoraTF" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane4" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="muestrasTb" type="javax.swing.JTable" visibility="private"/>
+        <Field name="nuevoBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="numCTF" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="proyectoTF" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstancia" returnType="BuscadorMuestras" visibility="public" isStatic="true"/>
+        <Method name="subscribe" returnType="void" visibility="public">
+          <Argument type="EventListener" name="listener"/>
+        </Method>
+        <Method name="unsubscribe" returnType="void" visibility="public">
+          <Argument type="EventListener" name="listener"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="String" name="eventType"/>
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="muestrasTbMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="buscarMuestreadorBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="buscarSitioBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="gAceptarBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="nuevoBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarBtnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="aceptarBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="loadMuestras" returnType="void" visibility="private">
+          <Argument type="List&lt;Muestra&gt;" name="list"/>
+        </Method>
+        <Method name="buscar" returnType="void" visibility="private"/>
+        <Method name="buscarBtn3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="preparar" returnType="void" visibility="public"/>
+        <Method name="setModo" returnType="void" visibility="public">
+          <Argument type="int" name="tipo_modo"/>
+        </Method>
+        <Method name="preparar" returnType="void" visibility="public">
+          <Argument type="int" name="tipo_modo"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Bitacora" package="Vista.Forms" visibility="public" xPosition="920.0" yPosition="1620.0">
+      <Fields>
+        <Field name="utils" type="VentanaUtils" visibility="package"/>
+        <Field name="repo" type="RepositorioBitacora" visibility="package"/>
+        <Field name="bitacoraScrollList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="HoraTF" package="Vista.Extras" visibility="public" xPosition="1220.0" yPosition="1620.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="text"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="columns"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="text"/>
+          <Argument type="int" name="columns"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Document" name="doc"/>
+          <Argument type="String" name="text"/>
+          <Argument type="int" name="columns"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getHour" returnType="LocalTime" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VentanaUtils" package="Vista.Extras" visibility="public" xPosition="1520.0" yPosition="1620.0">
+      <Fields>
+        <Field name="ventana" type="JFrame" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JFrame" name="ventana"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="centrarEnPantalla" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FechaTF" package="Vista.Extras" visibility="public" xPosition="1820.0" yPosition="1620.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="text"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="columns"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="text"/>
+          <Argument type="int" name="columns"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Document" name="doc"/>
+          <Argument type="String" name="text"/>
+          <Argument type="int" name="columns"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDate" returnType="LocalDate" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="date"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="" visibility="public" xPosition="2120.0" yPosition="1620.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorPruebas" package="Controlador" visibility="public" xPosition="20.0" yPosition="2020.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="public">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Prueba" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="OperacionesLocalDate" package="Controlador" visibility="public" xPosition="320.0" yPosition="2020.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="funcionMagica" returnType="int" visibility="protected">
+          <Argument type="LocalDate" name="d1"/>
+          <Argument type="LocalDate" name="d2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorParametros" package="Controlador" visibility="public" xPosition="620.0" yPosition="2020.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="public">
+          <Argument type="Parametro" name="p"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Parametro" name="p"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Parametro" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EventManager" package="Controlador" visibility="public" xPosition="920.0" yPosition="2020.0">
+      <Fields>
+        <Field name="listeners" type="Map&lt;String, List&lt;EventListener&gt;&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="operations"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="subscribe" returnType="void" visibility="public">
+          <Argument type="String" name="eventType"/>
+          <Argument type="EventListener" name="listener"/>
+        </Method>
+        <Method name="unsubscribe" returnType="void" visibility="public">
+          <Argument type="String" name="eventType"/>
+          <Argument type="EventListener" name="listener"/>
+        </Method>
+        <Method name="notify" returnType="void" visibility="public">
+          <Argument type="String" name="eventType"/>
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorClientes" package="Controlador" visibility="public" xPosition="1220.0" yPosition="2020.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="private">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorSignatarios" package="Controlador" visibility="public" xPosition="1520.0" yPosition="2020.0">
+      <Fields>
+        <Field name="repoPrueb" type="RepositorioPrueba" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Signatario" name="s"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="EventListener" package="Controlador" visibility="public" xPosition="1820.0" yPosition="2020.0">
+      <Methods>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="String" name="eventType"/>
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="ControladorSitios" package="Controlador" visibility="public" xPosition="2120.0" yPosition="2020.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="public">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Sitio" name="s"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorMuestra" package="Controlador" visibility="public" xPosition="20.0" yPosition="2420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="public">
+          <Argument type="Muestra" name="m"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Muestra" name="m"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Muestra" name="m"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorNormas" package="Controlador" visibility="public" xPosition="320.0" yPosition="2420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isValid" returnType="void" visibility="public">
+          <Argument type="Norma" name="n"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Norma" name="n"/>
+        </Method>
+        <Method name="modify" returnType="void" visibility="public">
+          <Argument type="Norma" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControladorGraficos" package="Controlador" visibility="public" xPosition="620.0" yPosition="2420.0">
+      <Fields>
+        <Field name="repoPrueba" type="RepositorioPrueba" visibility="package"/>
+        <Field name="repoSig" type="RepositorioSignatarios" visibility="package"/>
+        <Field name="repoNorm" type="RepositorioNorma" visibility="package"/>
+        <Field name="repoSit" type="RepositorioSitio" visibility="package"/>
+        <Field name="repoCli" type="RepositorioCliente" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="dataSetFromMap" returnType="DefaultCategoryDataset" visibility="private">
+          <Argument type="Map&lt;String, Long&gt;" name="map"/>
+          <Argument type="String" name="group"/>
+        </Method>
+        <Method name="chartDataSet" returnType="DefaultCategoryDataset" visibility="public">
+          <Argument type="int" name="chartNum"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="params" source="Vista.Forms.SignatariosMenu" target="Modelo.Entidad.Parametro" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Parametro&gt;"/>
+    <HasRelation name="resultados" source="Vista.Forms.ResultadosVista" target="Modelo.Entidad.Resultado" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Resultado&gt;"/>
+    <HasRelation name="normasCtl" source="Vista.Forms.NormaVista" target="Controlador.ControladorNormas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.ControladorSignatarios" target="Modelo.Entidad.Signatario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="frTF" source="Vista.Forms.BuscadorMuestras" target="Vista.Extras.FechaTF" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.ParametroVista" target="Controlador.EventListener" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="utils" source="Vista.Forms.PruebasVista" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="signatarios" source="Vista.Forms.SignatariosMenu" target="Modelo.Entidad.Signatario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Signatario&gt;"/>
+    <UseRelation source="Vista.Forms.SignatariosMenu" target="Vista.Forms.SignatariosMenu" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Vista.Forms.BuscadorMuestras" target="Controlador.EventListener"/>
+    <HasRelation name="sesion" source="Vista.Forms.MenuPrincipal" target="Modelo.Entidad.Signatario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instancia" source="Vista.Forms.BuscadorSignatarios" target="Vista.Forms.BuscadorSignatarios" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoParam" source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Repositorio.RepositorioParametro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instancia" source="Vista.Forms.SignatariosMenu" target="Vista.Forms.SignatariosMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoNorm" source="Controlador.ControladorGraficos" target="Modelo.Repositorio.RepositorioNorma" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Modelo.Repositorio.RepositorioSignatarios" target="Modelo.Entidad.Signatario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="utils" source="Vista.Forms.Login" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sitioCtl" source="Vista.Forms.BuscadorSitios" target="Controlador.ControladorSitios" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sigCtl" source="Vista.Forms.SignatariosMenu" target="Controlador.ControladorSignatarios" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Modelo.Repositorio.RepositorioSitio" target="Modelo.Entidad.Sitio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Controlador.ControladorParametros" target="Modelo.Repositorio.RepositorioParametro"/>
+    <HasRelation name="repoCli" source="Controlador.ControladorGraficos" target="Modelo.Repositorio.RepositorioCliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.ControladorClientes" target="Modelo.Entidad.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.MenuPrincipal" target="Modelo.Entidad.Signatario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="prueba" source="Vista.Forms.VentanasCaptura.Ventana1" target="Modelo.Entidad.Prueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="p" source="Vista.Forms.CheckBoxYPrueba" target="Modelo.Entidad.Prueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Modelo.Repositorio.RepositorioPrueba" target="Modelo.Entidad.Signatario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="norma" source="Vista.Forms.NormaVista" target="Modelo.Entidad.Norma" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="muestra" source="Vista.Forms.BuscadorMuestras" target="Modelo.Entidad.Muestra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Controlador.ControladorPruebas" target="Modelo.Repositorio.RepositorioPrueba"/>
+    <UseRelation source="Vista.Forms.Login" target="Vista.Forms.Login" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="clientesCtl" source="Vista.Forms.ClientesVista" target="Controlador.ControladorClientes" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="parametro" source="Vista.Forms.ParametroVista" target="Modelo.Entidad.Parametro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ultimaListaUsada" source="Vista.Forms.BuscadorSitios" target="Modelo.Entidad.Sitio" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Sitio&gt;"/>
+    <HasRelation name="repo" source="Vista.Forms.Bitacora" target="Modelo.Repositorio.RepositorioBitacora" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="utils" source="Vista.Forms.BuscadorSitios" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Modelo.Repositorio.RepositorioParametro" target="Modelo.Entidad.Parametro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="utils" source="Vista.Forms.ClientesVista" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Modelo.Entidad.Norma" target="Modelo.Entidad.Norma" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.BuscadorSitios" target="Modelo.Entidad.Sitio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="clientes" source="Vista.Forms.ClientesVista" target="Modelo.Entidad.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Cliente&gt;"/>
+    <HasRelation name="repoRes" source="Vista.Forms.ResultadosVista" target="Modelo.Repositorio.RepositorioResultado" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="analista" source="Vista.Forms.VentanasCaptura.Ventana1" target="Modelo.Entidad.Signatario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.ControladorParametros" target="Modelo.Entidad.Parametro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.BuscadorSitios" target="Controlador.EventListener" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.SignatariosMenu" target="Modelo.Entidad.Parametro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoSit" source="Vista.Forms.BuscadorMuestras" target="Modelo.Repositorio.RepositorioSitio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoSig" source="Vista.Forms.BuscadorSignatarios" target="Modelo.Repositorio.RepositorioSignatarios" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="parametro" source="Vista.Forms.SignatariosMenu" target="Modelo.Entidad.Parametro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="utils" source="Vista.Forms.ResultadosMenuPrevio" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pruebas" source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Entidad.Prueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, List&lt;Prueba&gt;&gt;"/>
+    <IsRelation name="is" source="Controlador.ControladorNormas" target="Modelo.Repositorio.RepositorioNorma"/>
+    <HasRelation name="utils" source="Vista.Forms.MenuPrincipal" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.EventManager" target="Controlador.EventListener" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.ControladorMuestra" target="Modelo.Entidad.Muestra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Modelo.Repositorio.RepositorioResultado" target="Modelo.Entidad.Resultado" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="utils" source="Vista.Forms.GraficosVista" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="events" source="Vista.Forms.ParametroVista" target="Controlador.EventManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="hmTF" source="Vista.Forms.BuscadorMuestras" target="Vista.Extras.HoraTF" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="resultado" source="Vista.Forms.ResultadosVista" target="Modelo.Entidad.Resultado" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Controlador.ControladorSignatarios" target="Modelo.Repositorio.RepositorioSignatarios"/>
+    <HasRelation name="repoParam" source="Vista.Forms.SignatariosMenu" target="Modelo.Repositorio.RepositorioParametro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.BuscadorMuestras" target="Modelo.Entidad.Muestra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.BuscadorSignatarios" target="Controlador.EventListener" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="utils" source="Vista.Forms.ParametroVista" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.BuscadorSignatarios" target="Vista.Forms.BuscadorSignatarios" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sitioRepo" source="Vista.Forms.ClientesVista" target="Modelo.Repositorio.RepositorioSitio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.ClientesVista" target="Modelo.Entidad.Sitio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoPrueba" source="Controlador.ControladorGraficos" target="Modelo.Repositorio.RepositorioPrueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="parametros" source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Entidad.Parametro" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Parametro&gt;"/>
+    <UseRelation source="Modelo.Repositorio.RepositorioMuestra" target="Modelo.Entidad.Muestra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listeners" source="Controlador.EventManager" target="Controlador.EventListener" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Map&lt;String, List&lt;EventListener&gt;&gt;"/>
+    <HasRelation name="utils" source="Vista.Forms.NormaVista" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Vista.Forms.PruebasVista" target="Controlador.EventListener"/>
+    <HasRelation name="instancia" source="Vista.Forms.MenuPrincipal" target="Vista.Forms.MenuPrincipal" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoPrueba" source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Repositorio.RepositorioPrueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sesion" source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Entidad.Signatario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.MenuPrincipal" target="Vista.Forms.MenuPrincipal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="utils" source="Vista.Forms.SignatariosMenu" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="parametros" source="Vista.Forms.ParametroVista" target="Modelo.Entidad.Parametro" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Parametro&gt;"/>
+    <HasRelation name="utils" source="Vista.Forms.Bitacora" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="normas" source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Entidad.Norma" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Norma&gt;"/>
+    <UseRelation source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Entidad.Signatario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Modelo.Repositorio.RepositorioCliente" target="Modelo.Entidad.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Entidad.Prueba" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="norma" source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Entidad.Norma" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Controlador.ControladorClientes" target="Modelo.Repositorio.RepositorioCliente"/>
+    <HasRelation name="repoNorma" source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Repositorio.RepositorioNorma" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.ControladorPruebas" target="Modelo.Entidad.Prueba" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="chartCtl" source="Vista.Forms.GraficosVista" target="Controlador.ControladorGraficos" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ultimaLista" source="Vista.Forms.BuscadorMuestras" target="Modelo.Entidad.Muestra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Muestra&gt;"/>
+    <HasRelation name="repoSig" source="Vista.Forms.BuscadorMuestras" target="Modelo.Repositorio.RepositorioSignatarios" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.ParametroVista" target="Vista.Forms.ParametroVista" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="utils" source="Vista.Forms.BuscadorSignatarios" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.NormaVista" target="Modelo.Entidad.Norma" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoPrueb" source="Controlador.ControladorSignatarios" target="Modelo.Repositorio.RepositorioPrueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoRes" source="Vista.Forms.VentanasCaptura.Ventana1" target="Modelo.Repositorio.RepositorioResultado" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoSit" source="Controlador.ControladorGraficos" target="Modelo.Repositorio.RepositorioSitio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instancia" source="Vista.Forms.ParametroVista" target="Vista.Forms.ParametroVista" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoSig" source="Controlador.ControladorGraficos" target="Modelo.Repositorio.RepositorioSignatarios" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="events" source="Vista.Forms.BuscadorSignatarios" target="Controlador.EventManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pruebas" source="Vista.Forms.PruebasVista" target="Modelo.Entidad.Prueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Prueba&gt;"/>
+    <HasRelation name="sitio" source="Vista.Forms.BuscadorSitios" target="Modelo.Entidad.Sitio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Modelo.Entidad.Signatario" target="Modelo.Entidad.Signatario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pruebasCtl" source="Vista.Forms.PruebasVista" target="Controlador.ControladorPruebas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="utils" source="Vista.Forms.VentanasCaptura.Ventana1" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Entidad.Norma" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instancia" source="Vista.Forms.Login" target="Vista.Forms.Login" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Controlador.ControladorMuestra" target="Modelo.Repositorio.RepositorioMuestra"/>
+    <UseRelation source="Vista.Forms.BuscadorSitios" target="Vista.Forms.BuscadorSitios" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="parametrosCtl" source="Vista.Forms.ParametroVista" target="Controlador.ControladorParametros" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="prueba" source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Entidad.Prueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="norma" source="Vista.Forms.VentanasCaptura.Ventana1" target="Modelo.Entidad.Norma" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.SignatariosMenu" target="Modelo.Entidad.Prueba" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instancia" source="Vista.Forms.BuscadorMuestras" target="Vista.Forms.BuscadorMuestras" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.ControladorSitios" target="Modelo.Entidad.Sitio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoPrueb" source="Vista.Forms.SignatariosMenu" target="Modelo.Repositorio.RepositorioPrueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repoParam" source="Vista.Forms.PruebasVista" target="Modelo.Repositorio.RepositorioParametro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.ResultadosMenuPrevio" target="Vista.Forms.ResultadosMenuPrevio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="muestra" source="Vista.Forms.ResultadosMenuPrevio" target="Modelo.Entidad.Muestra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="checkboxs" source="Vista.Forms.SignatariosMenu" target="Vista.Forms.CheckBoxYPrueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Map&lt;String, CheckBoxYPrueba&gt;"/>
+    <HasRelation name="cliente" source="Vista.Forms.ClientesVista" target="Modelo.Entidad.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="muestra" source="Vista.Forms.VentanasCaptura.Ventana1" target="Modelo.Entidad.Muestra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.ControladorNormas" target="Modelo.Entidad.Norma" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Modelo.Repositorio.RepositorioPrueba" target="Modelo.Entidad.Prueba" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="event" source="Vista.Forms.BuscadorSitios" target="Controlador.EventManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Modelo.Repositorio.RepositorioNorma" target="Modelo.Entidad.Norma" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="utils" source="Vista.Forms.BuscadorMuestras" target="Vista.Extras.VentanaUtils" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instancia" source="Vista.Forms.ResultadosMenuPrevio" target="Vista.Forms.ResultadosMenuPrevio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.ParametroVista" target="Modelo.Entidad.Parametro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="signatario" source="Vista.Forms.BuscadorSignatarios" target="Modelo.Entidad.Signatario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="eventos" source="Vista.Forms.BuscadorMuestras" target="Controlador.EventManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Vista.Forms.BuscadorMuestras" target="Controlador.EventListener" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Vista.Forms.ResultadosMenuPrevio" target="Controlador.EventListener"/>
+    <HasRelation name="listaEmpty" source="Vista.Forms.BuscadorMuestras" target="Modelo.Entidad.Muestra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Muestra&gt;"/>
+    <UseRelation source="Vista.Forms.BuscadorMuestras" target="Vista.Forms.BuscadorMuestras" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="signatarios" source="Vista.Forms.BuscadorSignatarios" target="Modelo.Entidad.Signatario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Signatario&gt;"/>
+    <HasRelation name="repoSig" source="Vista.Forms.Login" target="Modelo.Repositorio.RepositorioSignatarios" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="muestraCtl" source="Vista.Forms.BuscadorMuestras" target="Controlador.ControladorMuestra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instancia" source="Vista.Forms.BuscadorSitios" target="Vista.Forms.BuscadorSitios" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="normas" source="Vista.Forms.NormaVista" target="Modelo.Entidad.Norma" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Norma&gt;"/>
+    <IsRelation name="is" source="Controlador.ControladorSitios" target="Modelo.Repositorio.RepositorioSitio"/>
+    <HasRelation name="prueba" source="Vista.Forms.PruebasVista" target="Modelo.Entidad.Prueba" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fmTF" source="Vista.Forms.BuscadorMuestras" target="Vista.Extras.FechaTF" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="signatario" source="Vista.Forms.SignatariosMenu" target="Modelo.Entidad.Signatario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
