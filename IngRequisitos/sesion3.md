@@ -51,9 +51,20 @@ sistema con otros sistemas y con usuario. Ejp.
 la interfaz del usuario debe cumplir con las 
 imagen institucional de la empresa
 ### De calidad
+- **Diseño responsibo**
 - Exigencia para cumplir con la parte de
 rendimiento, accesibilidad, facilidad de uso.
 - Iconos para accesibilidad en caso de debilidad
-### De soporte
-### De proyecto
+- Modo oscuro(?)
 ### De evolución pokemon
+- Elegir una arquitectura para software
+### De proyecto
+- Requisitos que afectan y condicional el 
+proceso de desarrollo del proyecto
+- Si el profesor pide una libreria especial
+- **Tiempo de desarrollo de Septiembre-Diciembre 2024**
+### De soporte
+- Necesidades de interacción del sistema
+con otros sistemas y con usuario
+- **Que el usuario cuente con un navegador web** 
+se puede recomendar un navegador

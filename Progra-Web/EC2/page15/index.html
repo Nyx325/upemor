@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="areas.php" method="post">
+        <table>
+            <tr>
+                <td>Figura</td>
+                <td>
+                    <select id="selector-figura" name="figura" onchange="getInputs(this.value)">
+                        <option value="circulo">Círculo</option>
+                        <option value="cuadrado">Cuadrado</option>
+                        <option value="triangulo">Triángulo</option>
+                        <option value="rombo">Rombo</option>
+                        <option value="pentagono">Pentágono</option>
+                        <option value="trapecio">Trapecio</option>
+                        <option value="cubo">Cubo</option>
+                        <option value="cilindro">Cilindro</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <section id="inputs-section">
+            <!-- Aquí se cargarán los inputs -->
+        </section>
+        <button type="submit">Calcular Área</button>
+    </form>
+    <script src="./script.js"></script>
+</body>
+
+</html>
