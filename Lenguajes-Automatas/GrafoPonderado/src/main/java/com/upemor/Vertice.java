@@ -1,38 +1,33 @@
-package com.upemor;
+package org.upemor.grafoponderado;
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
-
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
+
 @Setter
+@Getter
 public class Vertice {
-  private String nombre;
-  private boolean visited;
-  private List<Adyacencia> adyacencias;
+    private String nombre;
+    private List<Adyacencia> adyacencias;
+    private boolean Visited;
+    private Etiqueta etiqueta;
+    
+    public Vertice(String nombre){
+        this.nombre = nombre;
+        this.adyacencias = new LinkedList<>();
+    }
+    
+    public void addAdyacencias(Adyacencia... adyacencias){
+        Collections.addAll(this.adyacencias, adyacencias);
+    }
+    
+    @Override
+    public String toString(){
+        return nombre;
+    }
 
-  public Vertice(String nombre) {
-    this.nombre = nombre;
-    this.adyacencias = new ArrayList<>();
-  }
-
-  public void addAdyacencias(Adyacencia... adyacecnias) {
-    Collections.addAll(this.adyacencias, adyacecnias);
-  }
-
-  public boolean isVisited() {
-    return this.visited;
-  }
-
-  public void setVisited(boolean visited) {
-    this.visited = visited;
-  }
-
-  @Override
-  public String toString() {
-    return "[" + nombre + "]";
-  }
+    
 }
